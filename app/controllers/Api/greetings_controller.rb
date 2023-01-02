@@ -1,11 +1,6 @@
-class GreetingsController < ApplicationsController
-    before_action :set_greeting
-
-    def show
+class Api::V1::GreetingsController < ApiController
+    def index
+      @greeting = Greeting.order(Arel.sql('RANDOM()')).first
     end
-
-    private
-    def set_greeting
-        @greeting = Greeting.find(params[id])
-    end
-end
+  end
+  
