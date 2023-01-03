@@ -4,8 +4,7 @@ import Greeting from "./pages/Greeting";
 
 const App = () => {
   return <>
-   <h1>Greeting App </h1>
-   <h2>Wishing you the best!</h2>
+   <h2>Greeting App </h2>
     <Routes>
       <Route path="/" element={<Greeting/>}/>
     </Routes>
